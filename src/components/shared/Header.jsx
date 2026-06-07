@@ -12,18 +12,20 @@ const Header = () => {
         <div className="bg-destructive p-1.5 rounded-lg">
             <Plane className='w-6 h-6 text-white' />
         </div>
-        <span>TripPlanner</span>
+        <span className='hidden sm:flex font-bold text-xl capitalize'>TripPlanner</span>
       </Link>
       {/* Button and profile */}
-      <div>
-        <Button>
+      <div className='flex gap-x-4 sm:gap-x-8'>
+        <Button variant='outline' className={'mt-1 bg-transparent'}>
             <Plus />
             Create Trip
         </Button>
-        <Button>
-            <User />
-            Login
-        </Button>
+        <div className='flex mt-1'>
+            <Button variant="destructive" className="px-5">
+                <User />
+                Login
+            </Button>
+        </div>
 
       </div>
     </header>

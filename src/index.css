@@ -154,7 +154,7 @@
 
 @layer utilities {
   h1{
-    @apply text-[36px] md:text-[144px] font-bold;
+    @apply text-[36px] md:text-[72px] font-bold;
   }
   h2{
     @apply text-[32px] md:text-[36px] font-bold;
