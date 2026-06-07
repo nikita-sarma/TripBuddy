@@ -1,15 +1,31 @@
-import { Plane } from 'lucide-react'
+import { Plane, Plus, User} from 'lucide-react'
 import { Link } from 'react-router-dom'
 import React from 'react'
+import { Button } from '../ui/button'
 
 const Header = () => {
   return (
-    <header>
-      <Link to={"/"} className=''>
-        <div>
-            <Plane className='w-6 h-6' />
+    <header className='bg-white border-b border-gray-200 px-6 py-3 flexBetween absolute top-0 left-0 right-0 w-full z-50'>
+        {/* Logo */}
+
+      <Link to={"/"} className='flex items-center gap-x-2 cursor-pointer'>
+        <div className="bg-destructive p-1.5 rounded-lg">
+            <Plane className='w-6 h-6 text-white' />
         </div>
+        <span>TripPlanner</span>
       </Link>
+      {/* Button and profile */}
+      <div>
+        <Button>
+            <Plus />
+            Create Trip
+        </Button>
+        <Button>
+            <User />
+            Login
+        </Button>
+
+      </div>
     </header>
   )
 }
